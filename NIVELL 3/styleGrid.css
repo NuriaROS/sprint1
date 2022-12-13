@@ -1,0 +1,267 @@
+* {
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: sans-serif;
+    /* border: 2px solid black; */
+}
+
+body {
+    font-family: 12px;
+    padding: 2rem;
+}
+
+header {
+    background-image: url(assets/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 9rem;
+    overflow: hidden;
+
+}
+
+.logo_web {
+    display: flex;
+    align-items: flex-start;
+    animation: transicionar 3s;
+
+
+}
+
+.logo {
+    width: 7rem;
+}
+
+.indice {
+    display: flex;
+}
+
+.index {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.4rem;
+}
+
+.img_menu {
+    height: 1rem;
+    width: 1rem;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.social_netw {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.socialnetw {
+    height: 1rem;
+    width: 1rem;
+}
+
+.cabecera {
+    background-color: rgba(185, 185, 185, 0.6);
+    display: flex;
+    height: 6rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    padding: 1.5rem;
+
+}
+
+h1 {
+    color: rgb(239, 154, 83);
+    font-family: serif;
+    text-align: center;
+}
+
+.foto {
+    width: 95%;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    animation: transicionar 3s;
+}
+
+main {
+    display: grid;
+    grid:
+        'articulos articulos aside'
+        'articulos articulos aside';
+    gap: 1rem;
+    padding: 1rem;
+    animation: transicionar 3s;
+    background-color: grey;
+}
+
+article {
+    grid-area: articulos;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 3fr 1fr;
+    background-color: white;
+}
+
+
+article div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 2px solid grey;
+}
+
+.pie-articulo {
+    grid-column: 1 / 3;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(185, 185, 185);
+}
+
+h2 {
+    display: flex;
+    width: 100%;
+    background-color: rgb(233, 119, 119);
+    color: white;
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgba(185, 185, 185);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+aside div:first-child {
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: rgba(153, 151, 151);
+    margin-top: 1rem;
+}
+
+footer div {
+    background-color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: grey;
+
+}
+
+@media (max-width: 768px) {
+    .nav {
+        margin-bottom: 5rem;
+    }
+
+    main {
+        grid:
+            'articulos articulos articulos'
+            'articulos articulos articulos'
+            'aside aside aside';
+        padding: 1rem;
+    }
+
+    aside {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        /* font-size: 13px; */
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 4rem;
+    }
+    .nav{
+        padding: 0.2rem;
+        margin-bottom: 2rem;
+    }
+    .indice{
+        display: block;
+    }
+    .indice div{
+        padding: 0.3rem;
+    }
+    .redes{
+        align-items: flex-start;
+        padding: 0.3rem;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.2rem
+    }
+    .cultura{
+        grid-area: cultura;
+    }
+    .gastronomia{
+        grid-area: gastronomia;
+    }
+    .turismo{
+        grid-area: turismo;
+    }
+    .vida_nocturna{
+        grid-area: vida-nocturna;
+    }
+
+    main {
+        padding: 0.5rem;
+        background-color: grey;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-columns: auto auto;
+        grid:
+            'articulos'
+            'aside';
+    }
+    
+    .pie-articulo{
+        grid-area: pie-articulo;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid:
+        'cultura'
+        'gastronomia'
+        'turismo'
+        'vida-nocturna'
+        'pie-articulo'
+        ;
+
+    }
+
+
+    /* article{
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: white;
+    }
+    article div{
+        grid-column: 1/6;
+    }
+    */
+}

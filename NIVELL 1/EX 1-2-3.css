@@ -1,0 +1,118 @@
+* {
+    margin: 10px;
+    padding: 5px;
+    max-width: 1200px;
+}
+
+/* cabecera */
+
+header,
+main,
+footer {
+    background-color: black;
+
+}
+
+.nav {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav>div {
+    background-color: red;
+    text-align: center;
+}
+
+.uno {
+    flex-grow: 1;
+}
+
+.dos {
+    flex-grow: 3;
+}
+
+.tres {
+    flex-grow: 1;
+}
+
+/* cabecera: barra título */
+.cabecera {
+    background-color: orange;
+}
+
+.titulo {
+    background-color: yellow;
+    text-align: center;
+    display: block;
+}
+
+/* contenido principal */
+
+main {
+    display: flex;
+}
+
+article {
+    background-color: rgb(54, 54, 82);
+    display: flex;
+    flex: 2 1 auto;
+    flex-wrap: wrap;
+}
+
+article>div {
+    background-color: blue;
+    flex: 1 1 40%;
+}
+
+article>div:last-child {
+    background-color: rgb(83, 138, 156);
+}
+
+/* contenido principal:  aside */
+
+aside {
+    background-color: red;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+aside>div {
+    background-color: yellow;
+}
+
+
+/* footer */
+
+footer>div {
+    background-color: rgb(153, 118, 13);
+}
+
+/* medias queries TABLET */
+
+@media (max-width: 1024px) {
+    body {
+        background-color: rgb(110, 53, 127);
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    article>div {
+        flex: 1 1 100%;
+    }
+
+}
+
+/* medias queries MOBIL */
+
+@media (max-width: 320px) {
+    body {
+        background-color: rgb(203, 132, 46);
+    }
+    .nav {
+        flex-direction: column;
+    }
+}
